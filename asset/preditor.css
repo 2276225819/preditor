@@ -1,0 +1,158 @@
+[editor]{
+    border: 1px solid #ccc; 
+    display: inline-block;    
+    position: relative;
+    background: #f8f8f8;
+}
+[editor] .editor,[editor] textarea{
+    height: 500px;  
+    width: 100%;
+    max-width:100%;
+    resize: both;
+    overflow: scroll;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: auto;
+    outline: 1px solid #ccc;
+    background: #fff;
+    word-break: break-all;
+    display: block;
+} 
+ [editor] .editor * { 
+    transition: 0.1s all;
+    max-width:none !important;  /* no layer out*/
+    max-height:none !important; 
+    min-width:auto !important; 
+    min-height:auto !important;
+}  
+[editor] .editor [draggable=true]{
+    zoom: 100%;/*has layer out*/
+    min-width: 0% !important; /*has layer out*/
+    outline: 2px dotted #f00 !important; 
+    cursor: move;  
+    user-select: none; 
+}
+[editor] .editor [draggable=true] * {
+    cursor: move; 
+    user-select: none; 
+}
+[editor] .editor.draging *{
+    zoom: 100%;/*has layer out*/
+    min-width:0% !important; /*has layer out*/
+    outline: 1px dotted #ccc;  
+    box-shadow:0 0 5px 4px rgba(0, 0, 0, 0.06);  
+}  
+[editor] .editor.draging [draggable=true]{ 
+    opacity: 0.5;  
+}
+ 
+[editor] .menu{
+    padding: 0 5px;
+    border-bottom: 1px solid #ccc;
+}
+[editor] .menu * {
+    vertical-align: middle;
+}
+ 
+[editor] .menu button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid transparent;
+    color: #717171;
+    background: none; 
+    position: relative;
+    font-size: 16px;
+    margin: 4px 0;
+} 
+
+[editor] .menu span{    
+    display: inline-block;
+    line-height: 42px;
+    height: 38px;
+    color: #717171;
+    width: 12px;
+    text-align: CENTER;
+    font-size: 12px;
+    vertical-align: top;
+}
+[editor] .menu select{     
+    height: 30px;
+    color: #717171;
+    font-size: 14px;
+    margin: 4px;
+    padding: 0px 8px;
+}
+[editor] .menu button:hover{ 
+    border: 1px solid #727272;
+}
+[editor] .foot{     
+    line-height: 20px;
+    font-size: 12px;
+    margin: 0px -5px;
+    padding:0 8px;
+    background: #f8f8f8;
+}
+[editor] .popup{
+     user-select: none; 
+    position: absolute;
+    padding: 0px 5px;
+    background: #fff;
+    box-shadow: 0px 0 5px 1px #ccc;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    line-height: 24px;
+    font-size: 14px; 
+    top:-999999999999px; 
+    overflow: hidden;
+    min-width: 50px;
+}
+[editor] .popup span{
+    cursor: pointer;
+}
+[editor] .popup a{
+    margin-right: 10px; 
+}
+
+[editor] .menulist {       
+    border: 1px solid #ccc;    
+    margin-top: 25px ; 
+    list-style-type: none;
+    position: absolute;
+    top: 25px;
+    background: #fff;
+    padding: 0px;
+    line-height: 20px;
+    max-height: 180px;
+    font-size: 12px;
+    overflow: auto;
+}
+
+[editor] .menulist li { 
+    padding: 5px 10px; 
+}
+[editor] .menulist li:hover {
+    background: #dedede;
+}
+
+
+
+[editor] .editor::-webkit-scrollbar { 
+    width: 4px;
+    height: 4px;
+}  
+[editor] .editor:hover::-webkit-scrollbar {
+    width: 4px;
+    height: 4px; 
+} 
+
+[editor] ::-webkit-scrollbar-thumb {    
+    background-color: rgba(193, 193, 193, 0.72);
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+[editor] ::-webkit-resizer {
+    background: #000;
+    border: 20px solid #d4d4d4;
+    padding: 10px;
+}

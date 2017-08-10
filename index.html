@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+    <link rel="stylesheet" href="asset/preditor.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_21stq1mbcfvfgvi.css">
+    <script src="asset/preditor.js"></script>
+    <script>
+        $(function () {
+            $('[name=predit]').preditor({
+                'upload_name': 'a',
+                'upload_url': 'b',
+                'upload_params': { token: 'a' },
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <textarea name="predit"> </textarea>
+</body>
+
+</html>
