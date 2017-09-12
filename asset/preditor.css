@@ -153,6 +153,6 @@
 
 [editor] ::-webkit-resizer {
     background: #000;
-    border: 20px solid #d4d4d4;
+    border: 4px solid #d4d4d4;
     padding: 10px;
 }
